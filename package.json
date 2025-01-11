@@ -1,13 +1,14 @@
 {
-  "name": "my-app",
+  "name": "ol-webpack",
   "version": "1.0.0",
+  "description": "Example using OpenLayers with Webpack",
   "scripts": {
-    "start": "vite --port 8080",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
-    "vite": "^6.0.7"
+    "json-loader": "^0.5.7",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "ol": "latest"

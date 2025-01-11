@@ -1,22 +1,13 @@
-import './style.css';
 import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import { fromLonLat } from 'ol/proj';
 import { createPoint } from './point_factory';
+import XYZ from 'ol/source/XYZ';
 
-const cities = await fetch('./population.json')
-  .then((response) => {
-    if (response.ok) {
-      return response.json();
-    }
-  })
-  .then((data) => {
-    return data;
-  })
-  .catch((error) => {
-    alert('Unable to find city data.' + error);
-  });
+const cities = await import('./population.json').then(({ default: cities }) => {
+  return cities;
+});
 
 const view = new View({
   center: fromLonLat([cities[0].longitude, cities[0].latitude]), // Sets the default center of the map
@@ -27,7 +18,9 @@ const map = new Map({
   target: 'map',
   layers: [
     new TileLayer({
-      source: new OSM(),
+      source: new XYZ({
+        url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      }),
     }),
   ],
   view: view,

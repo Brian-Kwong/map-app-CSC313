@@ -1,0 +1,1 @@
+(self.webpackChunkol_webpack=self.webpackChunkol_webpack||[]).push([[591],{7732:a=>{a.exports=[{name:"Cal Poly",latitude:35.305,longitude:-120.6625,population:0},{name:"Santa Maria",latitude:34.953,longitude:-120.4357,population:1},{name:"Los Angeles",latitude:34.0522,longitude:-118.2437,population:2}]}}]);
