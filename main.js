@@ -10,6 +10,7 @@ const cities = await import('./population.json').then(({ default: cities }) => {
 });
 
 const view = new View({
+  projection: MAP_TYPE,
   center: fromLonLat([cities[0].longitude, cities[0].latitude], MAP_TYPE), // Sets the default center of the map
   zoom: 8, // Sets the default zoom level
 });

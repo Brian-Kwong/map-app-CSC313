@@ -5,7 +5,7 @@ import { Point } from 'ol/geom';
 import { Feature } from 'ol';
 import { fromLonLat } from 'ol/proj';
 
-export const MAP_TYPE = 'ESPG:4326';
+export const MAP_TYPE = 'EPSG:4326';
 
 // Stroke for all points
 const stroke = new Stroke({
