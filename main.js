@@ -2,7 +2,7 @@ import { Map, View } from 'ol';
 import TileLayer from 'ol/layer/Tile';
 import OSM from 'ol/source/OSM';
 import { fromLonLat } from 'ol/proj';
-import { createPoint } from './point_factory';
+import { createPoint, MAP_TYPE } from './point_factory';
 import XYZ from 'ol/source/XYZ';
 
 const cities = await import('./population.json').then(({ default: cities }) => {
@@ -10,7 +10,7 @@ const cities = await import('./population.json').then(({ default: cities }) => {
 });
 
 const view = new View({
-  center: fromLonLat([cities[0].longitude, cities[0].latitude]), // Sets the default center of the map
+  center: fromLonLat([cities[0].longitude, cities[0].latitude], MAP_TYPE), // Sets the default center of the map
   zoom: 8, // Sets the default zoom level
 });
 
