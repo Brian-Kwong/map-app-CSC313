@@ -18,7 +18,7 @@ To contribute to this project please ensure you have the following software inst
 - [Git](https://git-scm.com/downloads) w/ your [GitHub credentials linked](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)  
 - A text editor (Suggested is [VS Code](https://code.visualstudio.com/download))  
 - A recent version of a major web browser  
-- \[Reccomended\] [Prettier](https://prettier.io/docs/en/install.html)
+- \[Recommended\] [Prettier](https://prettier.io/docs/en/install.html)
 
 1. Go to the directory where you would like to work on the application `cd <directory path>`  and clone the project `git clone git@github.com:Brian-Kwong/map-app-CSC313.git`  
 2. Change to that directory `cd ./map-app-CSC313`  
